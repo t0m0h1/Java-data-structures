@@ -69,7 +69,10 @@ class Tree extends Node {
 
 
 
+
 class Main {
+
+    // main method - driver code
     public static void main(String[] args) {
         Tree tree = new Tree();
         Node root = new Node(1);
@@ -80,9 +83,36 @@ class Main {
         tree.setRightNode(right);
 
 
+        // add more nodes
+
+        // left child of left node and right child of left node
+        Node leftChild1 = new Node(4);
+        left.pointToLeftNode(leftChild1);
+        Node leftChild2 = new Node(5);
+        left.pointToRightNode(leftChild2);
+
+
+        // left child of right node and right child of right node
+        Node rightChild1 = new Node(6);
+        right.pointToLeftNode(rightChild1);
+        Node rightChild2 = new Node(7);
+        right.pointToRightNode(rightChild2);
+
+
         // show the tree
-        System.out.println(tree.root.getNodeData());
-        System.out.println(tree.left.getNodeData());
-        System.out.println(tree.right.getNodeData());
+        // System.out.println(tree.root.getNodeData());
+        // System.out.println(tree.left.getNodeData());
+        // System.out.println(tree.right.getNodeData());
+
+
+        // visually show the tree structure
+        System.out.println("Tree structure:");
+        System.out.println("    " + tree.root.getNodeData());
+        System.out.println("   / \\");
+        System.out.println("  " + tree.left.getNodeData() + "   " + tree.right.getNodeData());
+        System.out.println(" / \\ / \\");
+        System.out.println(tree.left.left.getNodeData() + "  " + tree.left.right.getNodeData() + " " + tree.right.left.getNodeData() + "  " + tree.right.right.getNodeData());
+
+
     }
 }
