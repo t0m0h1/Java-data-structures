@@ -18,7 +18,7 @@ class Node {
 
     public Node(int data) {
         // Constructor logic here
-        this.data = 0;
+        this.data = data;
         this.left = null;
         this.right = null;
     }
@@ -78,6 +78,9 @@ class Main {
         tree.setLeftNode(left);
         Node right = new Node(3);
         tree.setRightNode(right);
+
+
+        // show the tree
         System.out.println(tree.root.getNodeData());
         System.out.println(tree.left.getNodeData());
         System.out.println(tree.right.getNodeData());
